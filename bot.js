@@ -12,6 +12,7 @@ client.on("message", msg => {
 	args = msg.content.split(" ");
 	if (args[0].toLowerCase() != config.prefix) {
 		return;
+<<<<<<< HEAD
 	}	
 	d = new Date();
 	bdate = new Date();
@@ -23,6 +24,12 @@ client.on("message", msg => {
 		}
 	// Gear check
 	else if (args[1].toLowerCase() == "check") {
+=======
+	}
+
+	// Gear check
+	if (args[1].toLowerCase() == "check") {
+>>>>>>> ee7abf5cce241c52ba6910011239b25b1a27772a
 		if (args.length < 3) {
 			msg.channel.sendMessage("I don't know who that is");
 			return;
@@ -154,6 +161,7 @@ client.on("message", msg => {
 		msg.channel.sendMessage(response.jokes[i]);
 		
 	}
+<<<<<<< HEAD
 	else if (args.indexOf("who") >= 0) {
 		i = Math.floor(Math.random() * response.trolls.length);
 		msg.channel.sendMessage(response.trolls[i]);		
@@ -162,6 +170,8 @@ client.on("message", msg => {
 		i = Math.floor(Math.random() * response.love.length);
 		msg.channel.sendMessage(response.love[i]);		
 	}
+=======
+>>>>>>> ee7abf5cce241c52ba6910011239b25b1a27772a
 	else if (response[args[1]]) {
 		msg.channel.sendMessage(response[message]);
 	}

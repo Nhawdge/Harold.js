@@ -26,6 +26,10 @@
 		"Your dps",
 		"...", 
 		"John tanking", 
+<<<<<<< HEAD
+=======
+		"Hold on, I'm still trying to spell \"tòmb\"", 
+>>>>>>> ee7abf5cce241c52ba6910011239b25b1a27772a
 		"What do you call a Gnome Priest?\nCompact Disc!",
 		"What do you call a druid who melees in tree form? \nA combat log",
 		"Why does <Restoration> smell so bad?\nThey never wipe!",
@@ -58,7 +62,11 @@
 		"What do you call 5 Mogu rolling down the hill?\nThe Rolling Stones!",
 		"Your mum’s so fat, when she logs into WoW she automatically gets World Explorer.",
 		"Your mom is so fat, when a rogue Shadowstepped her, he got loading screen…",
+<<<<<<< HEAD
 		"What do Rogues and noobs have in common? Everything!",
+=======
+		"What do Rogues and noobs have in common? They both pick locks!",
+>>>>>>> ee7abf5cce241c52ba6910011239b25b1a27772a
 		"How many Blizzard employees does it take to fix a lightbulb?\nWhy? It is working as intended.",
 		"What do you call it if paladins and druids share a bath?\nA HoT tub with Bubbles.",
 		"How many rogues does it take to kill a paladin?\nTwo. One to ambush him, one to wait at his hearthstone location.",
@@ -87,6 +95,7 @@
 		"Why do hunters get smashed in bars?\nThey’re always multi-shotting.",
 		"Why did Arthas become a Death Knight?\nThey didn’t let him raid as Retribution.",
 		"Why Didn’t the undead cross the road?\nBecause he didn’t have the guts",
+<<<<<<< HEAD
 		"Yo mama so fat that when she took a bath she flooded Thousand Needles.",
 		""
 	],
@@ -125,5 +134,8 @@
 		"If you could get John one thing for his birthday, what would it be?",
 		"I got John my undying affection for his birthday. <3",
 		"John's my favorite, He's not self centered or even remotely egotistical!"
+=======
+		"Yo mama so fat that when she took a bath she flooded Thousand Needles."		
+>>>>>>> ee7abf5cce241c52ba6910011239b25b1a27772a
 	]
 }

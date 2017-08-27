@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
 	"token": "MzA4MjgzNTE1MTIyODc2NDE3.C-em7A.lEKmUvoHnl07WvMCW4TH0WLIZXw",
 	"clientId": "308283515122876417",
+=======
+	"token": "",
+	"clientId": "",
+>>>>>>> ee7abf5cce241c52ba6910011239b25b1a27772a
 	"prefix": "harold,",
 	"wowKey": "u4gz9th8qpb52qsjw8abzj9zpqbse8jt",
 	"realm": "hyjal"
