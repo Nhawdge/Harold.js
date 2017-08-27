@@ -12,10 +12,17 @@ client.on("message", msg => {
 	args = msg.content.split(" ");
 	if (args[0].toLowerCase() != config.prefix) {
 		return;
-	}
-
+	}	
+	d = new Date();
+	bdate = new Date();
+	bdate.setDate(10);
+	bdate.setMonth(4);
+	if (bdate.toDateString() == d.toDateString()) {
+			i = Math.floor(Math.random() * response.birthday.length);
+			msg.channel.sendMessage(response.birthday[i]);	
+		}
 	// Gear check
-	if (args[1].toLowerCase() == "check") {
+	else if (args[1].toLowerCase() == "check") {
 		if (args.length < 3) {
 			msg.channel.sendMessage("I don't know who that is");
 			return;
@@ -24,8 +31,6 @@ client.on("message", msg => {
 		var character = args[2].toLowerCase();
 		var realm = args[3] ?  args[3].toLowerCase() : config.realm;
 		var url = encodeURI("https://us.api.battle.net/wow/character/" + realm + "/" + character + "?fields=items&locale=en_US&apikey="+ config.wowKey);
-		//console.log(url);
-		//msg.channel.sendMessage("Checking " + character + " from realm " + realm );
 		console.log("Checking " + character + " from realm " + realm);
 
 		https.get(url, (res) => {
@@ -35,17 +40,55 @@ client.on("message", msg => {
 
 			res.on('data', (d) => {
 				charData = JSON.parse(d);			
-				if (charData.name) {
-					//console.log(charData.class);
-					charClass = wowClasses.classes[charData.class-1].name;
-					charRace = wowRaces.races[charData.race-1].name;
-										//wowRaces.races[1].name
-					msg.channel.sendMessage(charData.name + " from " + charData.realm 
-						+ " is a level "+ charData.level + " " + charRace + " "+ charClass
-						+ " has an average item level of " + charData.items.averageItemLevel
-						+ " and equipped item level of " + charData.items.averageItemLevelEquipped 
-						+ ".");
+				if (!charData.name) return;
+
+				// Check Character race
+				for (r in wowRaces.races) {
+					if (wowRaces.races[r].id == charData.race) {
+						charRace = wowRaces.races[r].name;
+					}
 				}
+				// Check Character Class 
+				for (c in wowClasses.classes) {
+					if (wowClasses.classes[c].id == charData.class) {
+						charClass = wowClasses.classes[c].name;
+					}
+				}
+
+				// Check for legendaries
+				var legendary1 = null;
+				var legendary2 = null;
+				var legendaries = "";
+
+				for (item in charData.items) {
+					if (charData.items[item].quality == 5 && legendary1 == null) {
+						legendary1 = charData.items[item].name + " (" +charData.items[item].itemLevel +")";
+					}
+					else if (charData.items[item].quality == 5) {
+						legendary2 = charData.items[item].name + " (" +charData.items[item].itemLevel +")";
+					}
+				}
+				legendaries = legendary1 ? legendary1 : " no legendaries";
+				legendaries += legendary2 ? " and " + legendary2 : "";
+
+				output = charData.name + " from " + charData.realm 
+					+ " is a level "+ charData.level + " " + charRace + " "+ charClass
+					+ " has an average item level of " + charData.items.averageItemLevel
+					+ " and equipped item level of " + charData.items.averageItemLevelEquipped + ". ";
+
+				if (charData.level == 110) {
+					output += "\n" + charData.name + " is wearing " + legendaries + ". ";
+					output += charData.items.mainHand.name + " is " + charData.items.mainHand.itemLevel;
+					var traits = charData.items.mainHand.artifactTraits;
+					var traitTotal = 0;
+					if (traits.length == 0) traits = charData.items.offHand.artifactTraits;
+					for (trait in traits) {
+						traitTotal += traits[trait].rank;
+					}
+					output += " with " + traitTotal + " points."
+				}
+			
+				msg.channel.sendMessage(output);
 			});
 			res.on('error', (e) => {
 				console.error(e);
@@ -111,10 +154,18 @@ client.on("message", msg => {
 		msg.channel.sendMessage(response.jokes[i]);
 		
 	}
+	else if (args.indexOf("who") >= 0) {
+		i = Math.floor(Math.random() * response.trolls.length);
+		msg.channel.sendMessage(response.trolls[i]);		
+	}
+	else if (args.indexOf("love") >= 0) {
+		i = Math.floor(Math.random() * response.love.length);
+		msg.channel.sendMessage(response.love[i]);		
+	}
 	else if (response[args[1]]) {
 		msg.channel.sendMessage(response[message]);
 	}
-	else if (args[1].toLowerCase() == "tell") {
+	else if (args[1].toLowerCase() == "say") {
 		var output = "";
 		for (i = 2; i < args.length; i++ ) {
 			output += args[i] + " ";

@@ -20,11 +20,12 @@
 		"Paint me like one of your french girls",
 		"My Favorite movie? Short Circuit"
 	],
+	"yes": ["Okay", "Sure", "Yeah"],
+	"no": ["Nope", "No way", "No", "No thanks"],
 	"jokes": [
 		"Your dps",
 		"...", 
 		"John tanking", 
-		"Hold on, I'm still trying to spell \"tòmb\"", 
 		"What do you call a Gnome Priest?\nCompact Disc!",
 		"What do you call a druid who melees in tree form? \nA combat log",
 		"Why does <Restoration> smell so bad?\nThey never wipe!",
@@ -57,7 +58,7 @@
 		"What do you call 5 Mogu rolling down the hill?\nThe Rolling Stones!",
 		"Your mum’s so fat, when she logs into WoW she automatically gets World Explorer.",
 		"Your mom is so fat, when a rogue Shadowstepped her, he got loading screen…",
-		"What do Rogues and noobs have in common? They both pick locks!",
+		"What do Rogues and noobs have in common? Everything!",
 		"How many Blizzard employees does it take to fix a lightbulb?\nWhy? It is working as intended.",
 		"What do you call it if paladins and druids share a bath?\nA HoT tub with Bubbles.",
 		"How many rogues does it take to kill a paladin?\nTwo. One to ambush him, one to wait at his hearthstone location.",
@@ -86,6 +87,43 @@
 		"Why do hunters get smashed in bars?\nThey’re always multi-shotting.",
 		"Why did Arthas become a Death Knight?\nThey didn’t let him raid as Retribution.",
 		"Why Didn’t the undead cross the road?\nBecause he didn’t have the guts",
-		"Yo mama so fat that when she took a bath she flooded Thousand Needles."		
+		"Yo mama so fat that when she took a bath she flooded Thousand Needles.",
+		""
+	],
+	"trolls": [
+		"That's Princess Poppy",
+		"That's Branch",
+		"That's Bridget",
+		"That's Creek",
+		"That's Suki",
+		"That's Biggie",
+		"That's King Peppy",
+		"That's Cooper",
+		"That's Satin",
+		"That's Chenille",
+		"That's Guy",
+		"That's your pinkie"
+	],
+	"love": [
+		"I'm not ready for that kind of commitment",
+		"I think of you more like a sibling",
+		"You really aren't my type",
+		"Wouldn't that be a bit weird?",
+		"I like you in a platonic, not romantic - not to be confusing - kind of way too",
+		"I'm sorry was I ... *licks lips* leading you on?"
+	],
+	"birthday": [
+		"Happy Birthday John!",
+		"Did you know it's John's birthday?",
+		"I already sent John 1000 birthday gold to taurnädo, Have you?",
+		"I wish it was my birthday!\n... When is my birthday?",
+		"I hope John is having a great birthday today!",
+		"01001000 01100001 01110000 01110000\n 01111001 00100000 01000010 01101001\n 01110010 01110100 01101000 01100100\n 01100001 01111001 00100000 01001010\n 01101111 01101000 01101110 00100001",
+		":musical_note: Happy Birthday to undefined\nHappy birthday to undefined\nHappy birthday to undefined\nHappy birthday to undefined:musical_note:",
+		"I wonder what John's doing today... ON HIS BIRTHDAY?!",
+		"Great idea guys! Let's throw John a surprise party!\n I heard he likes gold!",
+		"If you could get John one thing for his birthday, what would it be?",
+		"I got John my undying affection for his birthday. <3",
+		"John's my favorite, He's not self centered or even remotely egotistical!"
 	]
 }

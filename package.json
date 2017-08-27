@@ -1,0 +1,8 @@
+{
+	"name": "Harold",
+	"version": "0.1.0",
+	"author": "John Pavek",
+	"scripts": {
+		"start": "nodejs bot.js"
+	}
+}
