@@ -1,6 +1,9 @@
 # Harold.js
 A guild "Harold" For world of Warcraft guilds
 
+Hi This project is archived. I no longer play World of Warcraft. I'd happily pass this off to anyone interested in maintaining. The core purpose of the bot no long seems valid (Checking legendaries/weapon power) to prevent people from faking their Ilvl with crafted garabge.
+
+
 # Usage
 Clone and run `nodejs bot.js` 
 
